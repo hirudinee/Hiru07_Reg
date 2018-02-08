@@ -4,7 +4,7 @@ exports.handler = function (event, context, callback) {
 
 	//added comments
 	kinesis.putRecord({
-		Data: 'Testedit',
+		Data: 'Testedit2',
 		PartitionKey: 'shardId-000000000001',
 		StreamName: 'Hiru_test_1'
 	}).promise()
