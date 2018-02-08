@@ -12,10 +12,12 @@ exports.handler = function (event, context, callback) {
 		.then(data => {
 			// your logic goes here
 			console.log('test : ', data);
+			callback(null, data);
 		})
 		.catch(err => {
 			// error handling goes here
 			console.log('sample : ', err);
+			callback(null, err);
 		});
 
 
