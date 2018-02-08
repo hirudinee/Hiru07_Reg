@@ -2,13 +2,11 @@ let AWS = require('aws-sdk');
 const kinesis = new AWS.Kinesis();
 exports.handler = function (event, context, callback) {
 
-//added comments
+	//added comments
 	kinesis.putRecord({
 		Data: 'Testedit',
-		PartitionKey: '001',
-		StreamName: 'Hiru_test_1',
-		ExplicitHashKey: '012',
-		SequenceNumberForOrdering: '123'
+		PartitionKey: 'shardId-000000000001',
+		StreamName: 'Hiru_test_1'
 	}).promise()
 		.then(data => {
 			// your logic goes here
